@@ -1,6 +1,8 @@
 # sanity-plugin-emoji-icons
 
-> This is a **Sanity Studio v3** plugin.
+> Plugin to add Emoji Icons to Previews in Sanity
+
+Coming soon... Screenshots 💃
 
 ## Installation
 
@@ -14,11 +16,20 @@ Add it as a plugin in `sanity.config.ts` (or .js):
 
 ```ts
 import {defineConfig} from 'sanity'
-import {myPlugin} from 'sanity-plugin-emoji-icons'
+import {emojiIcons} from 'sanity-plugin-emoji-icons'
 
 export default defineConfig({
   //...
-  plugins: [myPlugin({})],
+  plugins: [emojiIcons({})],
+})
+```
+Add an `emoji` property to your schema:
+
+```ts
+export default defineType({
+  name: 'myType',
+  type: 'document',
+  emoji: '🤠',
 })
 ```
 
